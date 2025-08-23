@@ -1,9 +1,6 @@
 { pkgs, lib, config, inputs, ... }:
 
 {
-  # https://devenv.sh/basics/
-  env.GREET = "devenv";
-
   # https://devenv.sh/packages/
   packages = [
     pkgs.git
@@ -15,12 +12,13 @@
 
   # https://devenv.sh/scripts/
   scripts.hello.exec = ''
-    echo hello from $GREET
+    echo "Hello"
   '';
 
   enterShell = ''
-    hello
+    echo "Starting devenv..."
     git --version
+    go version
   '';
 
   # https://devenv.sh/git-hooks/

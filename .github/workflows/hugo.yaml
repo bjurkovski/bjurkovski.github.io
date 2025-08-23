@@ -36,16 +36,10 @@ jobs:
     - name: Install devenv.sh
       run: nix profile install nixpkgs#devenv
 
-    - name: Build the devenv shell and run any pre-commit hooks
-      run: devenv test
-
-    - name: Run a single command in the devenv shell
-      run: devenv shell hello
-
-    - name: Run a multi-line command in the devenv shell
+    - name: Hugo build & deploy 
       shell: devenv shell bash -- -e {0}
       run: |
-        hello
+        cd web
         hugo \
             --gc \
             --minify \
