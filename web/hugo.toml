@@ -1,18 +1,30 @@
 baseURL = 'https://bjurkovski.github.io/'
 languageCode = 'en-us'
 title = 'Bruno Jurkovski'
-theme = 'typo'
+theme = 'PaperMod'
 
 [params]
-description = "Hello!"
+disableThemeToggle = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowAllPagesInParchive = true
 
-theme = 'auto'
-colorPalette = 'default'
-hideHeader = false
-
-homeIntroTitle = ''
-homeIntroContent = """
+[params.homeInfoParams]
+Title = "Hello!"
+Content = """I'm a Software Engineer @ [Snap](https://www.snap.com/). Welcome to my page!
 """
+
+[[menu.main]]
+name = 'Home'
+url = '/'
+
+[[params.socialIcons]]
+name = "linkedin"
+url = 'https://www.linkedin.com/in/bjurkovski/'
+
+[[params.socialIcons]]
+name = "github"
+url = 'https://github.com/bjurkovski'
 
 [caches]
   [caches.images]

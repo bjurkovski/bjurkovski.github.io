@@ -11,8 +11,9 @@
   languages.go.enable = true;
 
   # https://devenv.sh/scripts/
-  scripts.hello.exec = ''
-    echo "Hello"
+  scripts.localserver.exec = ''
+    cd $DEVENV_ROOT/web
+    hugo server --buildDrafts
   '';
 
   enterShell = ''
